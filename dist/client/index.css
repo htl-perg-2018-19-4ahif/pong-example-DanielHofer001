@@ -1,0 +1,74 @@
+/*BALL*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: lightgray;
+}
+
+#ball {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+
+li{
+    padding-left: 50%;
+    margin-left: 10px;
+
+}
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.leftpaddle {
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    background-color: red;
+    left:0px;
+}
+.rightpaddle{
+    position: absolute;
+    width: 20px;
+    height: 100px;
+    right: 0px;
+    background-color: green;
+}
+div{
+    font-size:80px;
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+}
+#player1{
+    display: inline;
+}
+#player2{
+    display: inline;
+
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+}​
+{}
