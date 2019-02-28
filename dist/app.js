@@ -16,7 +16,7 @@ const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client')));
 const server = http.createServer(app);
-const port = 8080;
+const port = process.env.port || 8080; // to work also online
 let player1 = 0;
 let player2 = 0;
 server.listen(port, () => console.log(`Server is listening on port ${port}...`));
