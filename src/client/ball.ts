@@ -69,14 +69,14 @@ async function runBall() {
 
       // Based on where the ball touched the browser window, we change the new target quadrant.
       // Note that in this solution the angle stays the same.
-     
-      const newLi = document.createElement('li');
+
+      //const newLi = document.createElement('li');
 
       switch (borderTouch.touchDirection) {
         case Direction.left:
           quadrant = (quadrant === 2) ? 1 : 0;
-          newLi.innerText = `(left) Paddle ${paddle1Pos} | ball: ${targetBallPosition.y}`;
-          keys.appendChild(newLi);
+          // newLi.innerText = `(left) Paddle ${paddle1Pos} | ball: ${targetBallPosition.y}`;
+          // keys.appendChild(newLi);
           if (paddle1Pos <= targetBallPosition.y && paddle1Pos + paddle.clientHeight >= targetBallPosition.y) {
           } else {
             socket.emit('player1');
@@ -86,8 +86,8 @@ async function runBall() {
           break;
         case Direction.right:
           quadrant = (quadrant === 0) ? 3 : 2;
-          newLi.innerText = `(right) Paddle ${paddle2Pos} | ball: ${targetBallPosition.y}`;
-          keys.appendChild(newLi);
+          // newLi.innerText = `(right) Paddle ${paddle2Pos} | ball: ${targetBallPosition.y}`;
+          // keys.appendChild(newLi);
           if (paddle2Pos <= targetBallPosition.y && paddle2Pos + paddle.clientHeight >= targetBallPosition.y) {
           } else {
             socket.emit('player2');
@@ -110,10 +110,10 @@ async function runBall() {
       ballCurrentPosition.x = Math.min(Math.max(borderTouch.touchPosition.x - ballHalfSize.width, 0) + ballHalfSize.width, clientSize.width);
       ballCurrentPosition.y = Math.min(Math.max(borderTouch.touchPosition.y - ballHalfSize.height, 0) + ballHalfSize.height, clientSize.height);
     } while (!out); // until out
-    
-    if(socket.connected){
+
+    if (socket.connected) {
       game();
-    }else{
+    } else {
       process.exit(-1);
     }
   }
