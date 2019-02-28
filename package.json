@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gulp",
     "watch": "gulp watch",
-    "start": "nodemon -w ./dist --exec node ./dist/app.js",
+    "start": "node ./dist/app.js",
     "game": "gulp && nodemon -w ./dist --exec node ./dist/app.js"
   },
   "author": "",
